@@ -25,11 +25,11 @@ function Board(props:any) {
     };
     
     return (
-        <ImageList>
+        <ImageList >
             {props.movieList.map((item:Movie) => (
-                <ImageListItem key={item.id}>
+                <ImageListItem sx={{ width: 500, height: 450 }} key={item.id}>
                     <img
-                        src={'https://image.tmdb.org/t/p/original' + item.poster_path}
+                        src={'https://image.tmdb.org/t/p/original' + item.poster_path + '?w=248&fit=crop&auto=format'}
                         alt={item.title}
                     />
                 <ImageListItemBar
