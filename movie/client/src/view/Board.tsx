@@ -20,7 +20,7 @@ function Board(props:any) {
     
     return (
         <ImageList>
-            {props.movieList.map((item:Movie) => (
+            {/* {props.movieList.map((item:Movie) => (
                 <ImageListItem key={item.image}>
                     <a
                         href={item.link}
@@ -46,7 +46,7 @@ function Board(props:any) {
                     }
                 />
                 </ImageListItem>
-            ))}
+            ))} */}
         </ImageList>
     );
 }
