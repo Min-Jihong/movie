@@ -77,7 +77,7 @@ function Dashboard(props:any){
                 alert("에러");
                 return;
             }
-            props.movie(response.data.movieListResult.movieList);
+            props.movie(response.data.results);
         });
     }
 

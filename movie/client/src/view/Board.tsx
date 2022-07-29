@@ -8,34 +8,35 @@ import InfoIcon from '@mui/icons-material/Info';
 
 function Board(props:any) {
     type Movie = {
-        actor:string;
-        director:string;
-        image:string;
-        link:string;
-        pubDate:string;
-        subtitle:string;
+        adult:boolean;
+        backdrop_path:string;
+        genre_ids:string[];
+        id:number;
+        original_language:string;
+        original_title:string;
+        overview:string;
+        popularity:number;
+        poster_path:string;
+        release_date:string;
         title:string;
-        userRating:string;
+        video:boolean;
+        vote_average:number;
+        vote_count:number;
     };
     
     return (
         <ImageList>
-            {/* {props.movieList.map((item:Movie) => (
-                <ImageListItem key={item.image}>
-                    <a
-                        href={item.link}
-                        target="_blank"
-                    >
-                        <img
-                            src={item.image}
-                            alt={item.title}
-                        />
-                    </a>
+            {props.movieList.map((item:Movie) => (
+                <ImageListItem key={item.id}>
+                    <img
+                        src={'https://image.tmdb.org/t/p/original' + item.poster_path}
+                        alt={item.title}
+                    />
                 <ImageListItemBar
                     title={
                         item.title
                     }
-                    subtitle={item.subtitle}
+                    subtitle={item.overview}
                     actionIcon={
                     <IconButton
                         sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
@@ -46,7 +47,7 @@ function Board(props:any) {
                     }
                 />
                 </ImageListItem>
-            ))} */}
+            ))}
         </ImageList>
     );
 }
