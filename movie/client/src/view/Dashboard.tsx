@@ -105,7 +105,6 @@ function Dashboard(props:any){
                     component="div"
                     sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
                     >
-                    최신 영화
                     </Typography>
                     <Search>
                     <SearchIconWrapper>

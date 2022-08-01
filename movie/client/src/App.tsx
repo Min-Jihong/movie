@@ -15,7 +15,7 @@ const App:React.FC = () => {
     result : object;
   }
   const [movieList,setMovieList] = React.useState<object[]>([]);
-  const movieOption:MovieUrl[] = [{
+  const movieOption:MovieUrl[] = [{   //ㅠㅠ DB를 안만든 죄
     title : '최신인기작',
     url : '/movie/popular'
   },{
