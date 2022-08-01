@@ -60,7 +60,7 @@ function Dashboard(props:any){
 
     const handleSearch = async (event:React.KeyboardEvent<HTMLInputElement>) => {
         if(event.key === 'Enter'){
-            // await (getData('/movie/popular',event.target.value));
+            await (getData('/search/movie',event.target.value));
         }
     }
     
@@ -70,6 +70,7 @@ function Dashboard(props:any){
             params : {
                 api_key : '97e69180e91b511c8ecf31bcf00b9f49',
                 language : 'ko-KR',
+                query : search,
                 page : 1
             }
         }).then((response)=> {
@@ -77,7 +78,11 @@ function Dashboard(props:any){
                 alert("에러");
                 return;
             }
-            props.movie(response.data.results);
+            console.log(response.data.results);
+            props.movie([{
+                title : '검색',
+                result : response.data.results
+            }]);
         });
     }
 

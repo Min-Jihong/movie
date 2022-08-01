@@ -44,7 +44,7 @@ function MovieList(props:any) {
                                 aria-describedby = {String(item.id)}
                                 onClick={function(){
                                     props.id(String(item.id));
-                                    props.overview(item.overview);
+                                    props.overview(item.overview || '내용이 없습니다.');
                                     props.open(true);
                                 }}
                             >
