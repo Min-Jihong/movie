@@ -60,7 +60,7 @@ function Dashboard(props:any){
 
     const handleSearch = async (event:React.KeyboardEvent<HTMLInputElement>) => {
         if(event.key === 'Enter'){
-            await (getData('/movie/popular',event.target.value));
+            // await (getData('/movie/popular',event.target.value));
         }
     }
     
